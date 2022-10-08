@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Modal</title>
+</head>
+
+<body>
+
+    <div id="fundo"></div>
+
+    <div id="modal"></div>
+
+        <div id="header-modal">
+            <h2>Header Modal</h2>
+            <button id="fechar-modal">X</button>
+        </div>
+        <div id="body-modal">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, delectus non. Consequatur vero
+                dignissimos amet, saepe quos eum iste, at ea suscipit voluptatum dolor, nostrum numquam ullam natus
+                perferendis ipsum!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas magni minus tenetur fugit suscipit
+                eaque aperiam dicta nihil deserunt quisquam eius distinctio cum, totam animi quibusdam ex consequuntur
+                dignissimos. Delectus!</p>
+        </div>
+
+    </div>
+
+    <script>
+
+        $(window).on('load', () => {
+            $('#modal').show()
+            $('#fundo').show()
+        });
+
+        $("#fechar-modal, #fundo").click(() => {
+            $('#modal').hide()
+            $('#fundo').hide()
+            $('#modal').remove()
+            $('#fundo').remove()
+        });
+
+        $(document).keyup(function (e) {
+            if (e.keyCode === 27) {
+                $('#modal').hide()
+                $('#fundo').hide()
+                $('#modal').remove()
+                $('#fundo').remove()
+            }
+        })
+
+
+    </script>
+
+</body>
+
+</html>
