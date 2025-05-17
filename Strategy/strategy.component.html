@@ -1,0 +1,10 @@
+<ul class="step-list">
+    <li *ngFor="let step of steps" class="step-item" [ngClass]="step.icon">
+      <div class="step-info">
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.subtitle }}</p>
+      </div>
+      <span class="step-icon">{{ step.icon }}</span>
+    </li>
+  </ul>
+  

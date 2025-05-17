@@ -1,0 +1,50 @@
+.step-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .step-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background 0.2s ease;
+  
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  
+    .step-info {
+      h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+      }
+  
+      p {
+        margin: 0.25rem 0 0;
+        color: #777;
+      }
+    }
+  
+    .step-icon {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    &.done .step-icon {
+      color: green;
+    }
+  
+    &.in_progress .step-icon {
+      color: orange;
+    }
+  
+    &.pending .step-icon {
+      color: gray;
+    }
+  }
+  
